@@ -1,4 +1,4 @@
-package com.dorrrke.finanseproject.data.models
+package com.dorrrke.finanseproject.data.dbModels
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
