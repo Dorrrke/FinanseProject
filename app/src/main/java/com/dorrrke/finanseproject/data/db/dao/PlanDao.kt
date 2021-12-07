@@ -2,27 +2,25 @@ package com.dorrrke.finanseproject.data.db.dao
 
 import androidx.room.*
 import com.dorrrke.finanseproject.data.dbModels.PlanModel
+import io.reactivex.Completable
+import io.reactivex.Flowable
 
 @Dao
 interface PlanDao {
 
     @Query("SELECT * FROM plans")
-    fun getAll(): List<PlanModel>
+    fun getAll(): Flowable<List<PlanModel>>
 
     @Query("SELECT * FROM plans WHERE pid IN (:planIds)")
-    fun loadAllByIds(planIds: IntArray): List<PlanModel>
+    fun loadAllByIds(planIds: IntArray): Flowable<List<PlanModel>>
 
-    @Query(
-        "SELECT * FROM plans WHERE owner_id LIKE (:oId)"
-    )
-    fun findByName(oId: Int): PlanModel
 
     @Update
-    fun update(user: PlanModel)
+    fun update(plan: PlanModel) : Completable
 
     @Insert
-    fun insertAll(vararg userModels: PlanModel)
+    fun insertAll(vararg planModels: PlanModel) : Completable
 
     @Delete
-    fun delete(userModel: PlanModel)
+    fun delete(planModel: PlanModel) : Completable
 }
