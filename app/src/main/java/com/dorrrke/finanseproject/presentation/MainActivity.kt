@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
@@ -22,15 +25,15 @@ import kotlinx.android.synthetic.main.fragment_main_page.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var db: AppDatabase
+    //lateinit var db: AppDatabase
 
-    @SuppressLint("ResourceType")
+    //@SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportFragmentManager.beginTransaction().replace(R.id.fragmentView, MainFragment())
-            .commit()
+            //supportFragmentManager.beginTransaction().replace(R.id.fragmentView, MainFragment())
+            //.commit()
 //        db = Room.databaseBuilder(
 //            applicationContext,
 //            AppDatabase::class.java, "poka"
@@ -48,6 +51,33 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.option_menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.nav_меню -> {
+                Toast.makeText(this, "Главное меню", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_Создание -> {
+                Toast.makeText(this, "Создание плана", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_Редактирование -> {
+                Toast.makeText(this, "Редактирование плана", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_Семья -> {
+                Toast.makeText(this, "Семейный план", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+}
 //    @SuppressLint("CheckResult")
 //    private fun loadDb(): Completable {
 //        val data = mutableListOf<PlanModel>()
@@ -70,4 +100,3 @@ class MainActivity : AppCompatActivity() {
 //            PlanModel(5, 1, "10.10.21-10.11.21", 20607.0, false, 5),
 //            PlanModel(6, 1, "10.11.21-10.12.21", 29480.0, false, 6))
 //}
-}

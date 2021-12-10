@@ -11,11 +11,12 @@
         android:layout_width="369dp"
         android:layout_height="141dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/layout_back"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
