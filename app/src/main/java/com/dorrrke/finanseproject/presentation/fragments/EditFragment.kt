@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.dorrrke.finanseproject.R
+import com.dorrrke.finanseproject.presentation.viewmodels.EditViewModel
+import com.dorrrke.finanseproject.presentation.viewmodels.MainViewModel
 
 
 class EditFragment : Fragment() {
-
+    private lateinit var vm2: EditViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

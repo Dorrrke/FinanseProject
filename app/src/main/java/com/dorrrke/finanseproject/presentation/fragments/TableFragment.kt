@@ -6,9 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.dorrrke.finanseproject.R
+import com.dorrrke.finanseproject.presentation.viewmodels.EditViewModel
+import com.dorrrke.finanseproject.presentation.viewmodels.TableViewModel
 
 
- class TableFragment : Fragment() {
+class TableFragment : Fragment() {
+     private lateinit var vm4: TableViewModel
+
      override fun onCreateView(
          inflater: LayoutInflater, container: ViewGroup?,
          savedInstanceState: Bundle?

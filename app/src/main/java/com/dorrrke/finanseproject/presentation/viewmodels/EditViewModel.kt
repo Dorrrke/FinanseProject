@@ -1,11 +1,12 @@
 package com.dorrrke.finanseproject.presentation.viewmodels
-
 import androidx.lifecycle.ViewModel
 
-class TableViewModel : ViewModel() {
+
+class EditViewModel: ViewModel() {
 
     init {
 
     }
+
 
 }
