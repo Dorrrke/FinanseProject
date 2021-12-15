@@ -20,10 +20,8 @@ import com.dorrrke.finanseproject.data.adapters.MainPageRecyclerAdapter
 import com.dorrrke.finanseproject.data.db.AppDatabase
 import com.dorrrke.finanseproject.data.dbModels.PlanModel
 import com.dorrrke.finanseproject.databinding.ActivityMainBinding
-import com.dorrrke.finanseproject.presentation.fragments.EditFragment
-import com.dorrrke.finanseproject.presentation.fragments.FamilyFragment
-import com.dorrrke.finanseproject.presentation.fragments.MainFragment
-import com.dorrrke.finanseproject.presentation.fragments.TableFragment
+import com.dorrrke.finanseproject.presentation.fragments.*
+import com.dorrrke.finanseproject.presentation.fragments.TableFragment.Companion.newInstance
 import com.dorrrke.finanseproject.presentation.viewmodels.MainViewModel
 import io.reactivex.Completable
 import io.reactivex.schedulers.Schedulers
@@ -42,22 +40,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-            supportFragmentManager.beginTransaction().replace(R.id.place_holder, MainFragment())
+           supportFragmentManager.beginTransaction().replace(R.id.place_holder, MainFragment())
             .commit()
         db = Room.databaseBuilder(
            applicationContext,
             AppDatabase::class.java, "poka"
         ).build()
 
-//        loadDb().subscribeOn(Schedulers.newThread())
-//            .subscribe()
-//
-//
-//        testList()
-//
-//        val recycler: RecyclerView = findViewById(R.id.recycler)
-//        recycler.layoutManager = LinearLayoutManager(this)
-//        recycler.adapter = MainPageRecyclerAdapter(db.plans().getAll())
+       //loadDb().subscribeOn(Schedulers.newThread())
+            //.subscribe()
+
+
+       //testList()
+
+       //val recycler: RecyclerView = findViewById(R.id.recycler)
+       //recycler.layoutManager = LinearLayoutManager(this)
+      // recycler.adapter = MainPageRecyclerAdapter(db.plans().getAll())
 
     }
 
@@ -67,12 +65,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId){
+        return when(item.itemId) {
             R.id.nav_меню -> {
                 Toast.makeText(this, "Главное меню", Toast.LENGTH_SHORT).show()
                 supportFragmentManager
                     .beginTransaction()
-                    .replace(R.id.place_holder, MainFragment())
+                    .replace(R.id.place_holder, MainFragment.newInstance())
                     .commit()
                 item.isChecked = true
                 true

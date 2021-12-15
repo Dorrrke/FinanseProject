@@ -15,7 +15,7 @@ data class PlanTableModel(
     @PrimaryKey(autoGenerate = true) val ptId: Int,
     @ColumnInfo(name = "purchase") val purchase: String,
     @ColumnInfo(name = "type") val type: String,
-    @ColumnInfo(name = "price") val price: Double,
+    @ColumnInfo(name = "price") val price: Int,
     @ColumnInfo(name = "pId") val pId: Double,
 ) {
 }

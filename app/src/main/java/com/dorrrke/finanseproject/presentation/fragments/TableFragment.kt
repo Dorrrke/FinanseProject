@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TableLayout
+import android.widget.TableRow
 import com.dorrrke.finanseproject.R
 import com.dorrrke.finanseproject.presentation.viewmodels.EditViewModel
 import com.dorrrke.finanseproject.presentation.viewmodels.TableViewModel
@@ -17,7 +19,8 @@ class TableFragment : Fragment() {
          inflater: LayoutInflater, container: ViewGroup?,
          savedInstanceState: Bundle?
      ): View? {
-         return inflater.inflate(R.layout.fragment_table, container, false)
+        val view = inflater.inflate(R.layout.fragment_table, container, false)
+         return view
      }
 
      companion object{
@@ -25,5 +28,7 @@ class TableFragment : Fragment() {
          fun newInstance()=TableFragment()
      }
 
- }
+
+
+}
 

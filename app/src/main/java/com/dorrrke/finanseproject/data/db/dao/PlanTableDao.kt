@@ -1,5 +1,6 @@
 package com.dorrrke.finanseproject.data.db.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.dorrrke.finanseproject.data.dbModels.PlanTableModel
 import io.reactivex.Completable
@@ -27,4 +28,9 @@ interface PlanTableDao {
 
     @Delete
     fun delete(userModel: PlanTableModel) : Completable
+
+
+
+
+
 }
