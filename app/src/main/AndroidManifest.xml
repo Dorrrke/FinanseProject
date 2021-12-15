@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinanseProject">
         <activity
-            android:name=".presentation.PlanEditActivity"
+            android:name=".presentation.Register"
             android:exported="false" />
         <activity
             android:name=".presentation.MainActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".presentation.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
