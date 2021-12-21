@@ -2,17 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <item
-    android:id="@+id/nav_меню"
+    android:id="@+id/nav_Menu"
     android:title="Главное меню"
     android:icon="@drawable/ic_baseline_home_24"
     app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/nav_Создание"
+        android:id="@+id/nav_Create"
         android:title="Создание плана"/>
-
-    <item android:id="@+id/nav_Редактирование"
+    <item android:id="@+id/nav_Edit"
         android:title="Редактирование плана"/>
-    <item android:id="@+id/nav_Семья"
+    <item android:id="@+id/nav_Family"
         android:title="Семейный план"/>
 </menu>

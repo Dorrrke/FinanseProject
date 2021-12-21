@@ -16,6 +16,6 @@ data class PlanTableModel(
     @ColumnInfo(name = "purchase") val purchase: String,
     @ColumnInfo(name = "type") val type: String,
     @ColumnInfo(name = "price") val price: Int,
-    @ColumnInfo(name = "pId") val pId: Double,
+    @ColumnInfo(name = "pId") val pId: Int
 ) {
 }

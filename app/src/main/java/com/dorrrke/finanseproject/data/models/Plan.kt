@@ -6,6 +6,6 @@ class Plan(
     val period: String,
     val budget: Double,
     val moneybox: Boolean,
-    val table: List<PlanTable>
+    val table: ArrayList<PlanTable>
 ) {
 }

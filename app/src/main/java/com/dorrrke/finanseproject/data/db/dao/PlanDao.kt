@@ -8,7 +8,7 @@ import io.reactivex.Flowable
 @Dao
 interface PlanDao {
 
-    @Query("SELECT * FROM plans")
+    @Query("SELECT * FROM plans ORDER BY pid DESC")
     fun getAll(): Flowable<List<PlanModel>>
 
     @Query("SELECT * FROM plans WHERE pid IN (:planIds)")

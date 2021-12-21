@@ -14,13 +14,11 @@ class Login : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
 
-            if (edUsername.text.trim().isNotEmpty() || edMobile.text.trim().isNotEmpty())
-            {
+            if (edUsername.text.toString() == "admin" && edMobile.text.toString() == "8111111111") {
                 Toast.makeText(this, "Input provided", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, MainActivity::class.java);
                 startActivity(intent)
-            }
-            else {
+            } else {
                 Toast.makeText(this, "Input required", Toast.LENGTH_LONG).show()
             }
         }

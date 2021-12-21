@@ -1,6 +1,5 @@
 package com.dorrrke.finanseproject.data.db.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.dorrrke.finanseproject.data.dbModels.PlanTableModel
 import io.reactivex.Completable
@@ -11,8 +10,8 @@ interface PlanTableDao {
     @Query("SELECT * FROM planTable")
     fun getAll(): Flowable<List<PlanTableModel>>
 
-    @Query("SELECT * FROM planTable WHERE ptId IN (:planTableIds)")
-    fun loadAllByIds(planTableIds: IntArray): Flowable<List<PlanTableModel>>
+    @Query("SELECT * FROM planTable WHERE pId IN (:planId)")
+    fun loadAllByIds(planId: Int): Flowable<List<PlanTableModel>>
 
 //    @Query(
 //        "SELECT * FROM plan_table WHERE first_name LIKE :first AND " +

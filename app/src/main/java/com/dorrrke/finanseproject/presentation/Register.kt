@@ -14,12 +14,11 @@ class Register : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         btnRegister.setOnClickListener {
-            if(textUsername.text.trim().isNotEmpty() || textMiddleName.text.isNotEmpty() || textLastName.text.isNotEmpty() || textMobile.text.isNotEmpty() || textEmail.text.isNotEmpty())
-            {
-                Toast.makeText(this, "Input provided", Toast.LENGTH_LONG).show()
-            }
-
-            else {
+            if (textUsername.text.trim()
+                    .isNotEmpty() && FIO.text.isNotEmpty() && textMobile.text.isNotEmpty() && textEmail.text.isNotEmpty()
+            ) {
+                Toast.makeText(this, "Account created", Toast.LENGTH_LONG).show()
+            } else {
                 Toast.makeText(this, "Input required", Toast.LENGTH_LONG).show()
             }
         }
