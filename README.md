@@ -1,7 +1,7 @@
 # FinanseProject
 ## Использованные технологии.
-⋅⋅* Room
-⋅⋅* RxJava
+* Room
+* RxJava
 ## Разработчики.
 :octocat: Герасимов Михаил
 [GitHub](https://github.com/Dorrrke)
