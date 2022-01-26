@@ -1,9 +1,9 @@
 # FinanseProject
-##Использованные технологии.
-⋅⋅*Room
-⋅⋅*RxJava
-##Разработчики.
+## Использованные технологии.
+⋅⋅* Room
+⋅⋅* RxJava
+## Разработчики.
 :octocat: Безобразов Александр
-[GitHub]https://github.com/ultraxion2000
+[GitHub](https://github.com/ultraxion2000)
 :octocat: Герасимов Михаил
-[GitHub]https://github.com/Dorrrke
+[GitHub](https://github.com/Dorrrke)
